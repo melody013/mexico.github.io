@@ -1,0 +1,465 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color-main-one: #FFA500;
+    --color-main-two: #FFFFFF;
+    --color-main-tree: #121212;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow: auto;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color-main-one);
+}
+
+ul {
+    list-style: none;
+}
+
+header .container {
+    justify-content: space-between;
+}
+
+.general {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/bandera.jfif) no-repeat;
+    background-position: left;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 81rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* MENU MOBILE 
+******************************* */
+.links .menu-mobile {
+    color: var(--color-main-one);
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+/* MENU NORMAL
+******************************* */
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul {
+    display: flex;
+    height: 70px;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul li a {
+    display: inline-block;
+    margin: 0 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .5s;
+
+}
+
+.links ul li a:hover {
+    margin: 0 1rem;
+    color: var(--color-main-two);
+}
+
+/* LOGO
+******************************** */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    font-size: 30px;
+    color: var(--color-main-one);
+    padding-left: 50px;
+    padding-top: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.logo i {
+    padding-right: 10px;
+}
+
+.collums {
+    padding-top: 5%;
+    display: grid;
+    grid-template-areas:
+        "c1 c2"
+        "c1 c2";
+}
+
+.collum-left {
+    grid-area: c1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10%;
+    padding-left: 10%;
+    max-width: 600px;
+}
+
+.collum-left h1 {
+    font-size: 50px;
+    color: var(--color-main-one);
+    padding-bottom: 10px;
+    animation: 1s titletLeft forwards;
+}
+
+
+@keyframes titletLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes textTop {
+    0% {
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonBottom {
+    0% {
+        transform: translatey(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+
+
+.collum-left p {
+    display: flex;
+    justify-content: flex-end;
+    font-family: '', sans-serif;
+    font-size: 15px;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: var(--color-main-two);
+    animation: 2s textTop forwards;
+
+}
+
+.collum-right {
+    grid-area: c2;
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    width: 250px;
+    height: 230px;
+    border-radius: 20px;
+    padding: 15px 25px;
+    margin: 10px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-position: bottom;
+    background-size: contain;
+    display: inline-block;
+    transition: .7s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    opacity: .7;
+    transition: .5s;
+}
+
+.card h5 {
+    color: #121212;
+    transition: .5s;
+}
+
+.card:hover h5 {
+    color: var(--color-main-two);
+    transform: translateY(100px);
+    font-size: 15px;
+}
+
+.card1 {
+    background: url(../img/Chichén\ Itza.jfif);
+    background-position: center;
+    background-size: cover;
+}
+
+.card1 p {
+    display: none;
+}
+
+.card2 {
+    background: url(../img/Truchas\ La\ Cabañita.jfif);
+    background-position: center;
+    background-size: cover;
+}
+
+.card3 {
+    background: url(../img/ciudad.jfif);
+    background-position: center;
+    background-size: cover;
+}
+
+.card4 {
+    background: url(../img/Cancun.jfif);
+    background-position: center;
+    background-size: cover;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 18px;
+    width: 200px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    line-height: 1;
+    text-align: center;
+    background: var(--color-main-one);
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s linear;
+    animation: 3s buttonBottom forwards;
+}
+
+button:hover {
+    background: transparent;
+    border: 1px solid var(--color-main-one);
+    color: var(--color-main-one);
+    font-weight: 600;
+}
+
+
+@media (max-width: 1320px) {
+    .links ul {
+        padding-right: 30%;
+    }
+
+    .card {
+        width: 220px;
+        height: 180px;
+    }
+
+    .collum-left {
+        max-width: 500px;
+        /*  max-height: 500px; */
+        padding-left: 10%;
+    }
+
+    .card:hover h5 {
+        color: var(--color-main-two);
+        transform: translateY(100px);
+        font-size: 15px;
+
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .collum-right {
+        padding-top: 15%;
+    }
+}
+
+
+@media (max-width: 1040px) {
+    .collum-right {
+        padding-top: 15%;
+    }
+
+    .card {
+        width: 220px;
+        height: 180px;
+    }
+
+    .card h5 {
+        font-size: 10px;
+    }
+
+    .card:hover h5 {
+        color: var(--color-main-two);
+        transform: translateY(100px);
+        font-size: 11px;
+
+    }
+}
+
+
+@media (max-width: 1005px) {
+
+    /* MENU MOBILE */
+    .links .menu-mobile {
+        display: block;
+        padding-top: 2rem;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        outline: none;
+        border: none;
+    }
+
+    .container .links {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ESCONDE O MENU NORMAL */
+    .container .links ul {
+        display: none;
+    }
+
+    /* INSERE A CLASSE active NO MENU PARA EXIBIR A UL MOBILE ATRAVÉS DO JAVASCRIPT */
+    .container .links.active ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        background-color: var(--color-main-tree);
+    }
+
+    .container .links ul li a {
+        padding-top: 30%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .collums {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 5%;
+        display: grid;
+        grid-template-areas:
+            "c1 c1"
+            "c2 c2";
+    }
+
+    .collum-left {
+        width: 100%;
+        min-width: 80%;
+        grid-area: c1;
+        padding-top: 2%;
+        padding-bottom: 1%;
+    }
+
+    .collum-left h1 {
+        font-size: 50px;
+        padding-bottom: 10px;
+    }
+
+    .collum-right {
+        width: 100%;
+        min-width: 100%;
+        grid-area: c2;
+        padding-top: 15%;
+        justify-content: center;
+    }
+
+    .card {
+        width: 180px;
+        height: 170px;
+    }
+
+    .card h5 {
+        font-size: 10px;
+    }
+
+    .card:hover h5 {
+        color: var(--color-main-two);
+        transform: translateY(100px);
+        font-size: 11px;
+
+    }
+}
+
+
+@media (max-width: 775px) {
+    .collum-left {
+        max-width: 300px;
+        padding-bottom: 20px;
+    }
+
+    .collum-left h1 {
+        font-size: 30px;
+        padding-top: 20%;
+    }
+
+    .collum-left p {
+        font-size: 15px;
+    }
+
+    .collum-left button {
+        width: 130px;
+        font-size: 12px;
+    }
+
+    .collum-right {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 0;
+    }
+
+    .card {
+        width: 80%;
+        /* height: 100px; */
+
+    }
+}
